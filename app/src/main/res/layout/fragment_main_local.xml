@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_my_file"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_myfile"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:tabIndicatorColor="@color/color_48baf3"
+        app:tabIndicatorHeight="3dp"
+        app:tabSelectedTextColor="@color/md_black_1000"
+        app:tabTextColor="@color/md_blue_grey_600"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/md_grey_400"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_myfile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#e6e5e5">
+
+        <TextView
+            android:id="@+id/tv_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_bt_send"
+            android:padding="5dp"
+            android:text="预览"
+            android:textColor="@color/md_grey_700"
+            android:textSize="14dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_all_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/tv_preview"
+            android:layout_toRightOf="@+id/tv_preview"
+            android:text="@string/size"
+            android:textColor="@color/md_blue_grey_600"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_bt_send"
+            android:padding="5dp"
+            android:text="@string/send"
+            android:textColor="@color/md_grey_700"
+            android:textSize="14dp"/>
+    </RelativeLayout>
+</LinearLayout>

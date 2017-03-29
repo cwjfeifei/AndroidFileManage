@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AndroidFileManage</string>
+    <string name="size">已选%1$s</string>
+    <string name="send">发送(%1$s)</string>
+    <string name="count">共%1$s个文件</string>
+</resources>

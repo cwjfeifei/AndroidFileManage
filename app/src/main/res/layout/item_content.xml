@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical">
+
+    <cwj.androidfilemanage.view.CheckBox
+        android:id="@+id/cb_file"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        app:border_color="@color/color_48baf3"
+        app:checkbox_color="@color/color_48baf3"
+        app:checkbox_size="24dp"
+        app:checked_drawable="@drawable/ic_album_tick_white"
+        app:unchecked_color="@color/md_white_1000"/>
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/cb_file"
+        android:layout_toRightOf="@+id/cb_file"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rc_ad_list_audio_icon"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/iv_cover"
+        android:layout_toRightOf="@+id/iv_cover"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dp"
+            android:ellipsize="middle"
+            android:lines="1"
+            android:text="kjgsadgfdsjk"
+            android:textColor="@color/md_grey_900"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dp"
+            android:text="kjgsadgfdsjk"
+            android:textColor="@color/md_grey_600"
+            android:textSize="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dp"
+            android:text="kjgsadgfdsjk"
+            android:textColor="@color/md_grey_600"
+            android:textSize="10dp"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/md_blue_grey_100"/>
+</RelativeLayout>

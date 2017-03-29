@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <declare-styleable name="CheckBox">
+        <attr name="checkbox_color" format="color"/>
+        <attr name="unchecked_color" format="color"/>
+        <attr name="disabled_color" format="color"/>
+        <attr name="border_color" format="color"/>
+        <attr name="checkbox_size" format="dimension"/>
+        <attr name="invisible_in_unchecked_state" format="boolean"/>
+        <attr name="checked_drawable" format="reference"/>
+        <attr name="unchecked_drawable" format="reference"/>
+        <attr name="show_border_in_check_state" format="boolean"></attr>
+    </declare-styleable>
+
+    <style name="MyToolbar" parent="android:Widget">
+        <item name="titleTextAppearance">@style/ToolBarTitle</item>
+        <!--<item name="subtitleTextAppearance">@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle</item>-->
+        <item name="android:minHeight">48dp</item>
+        <item name="titleMargins">4dp</item>
+        <item name="maxButtonHeight">56dp</item>
+        <item name="collapseIcon">?attr/homeAsUpIndicator</item>
+        <!--<item name="collapseContentDescription">@string/abc_toolbar_collapse_description</item>-->
+        <item name="contentInsetStart">16dp</item>
+        <!--<item name="android:paddingLeft">@dimen/abc_action_bar_default_padding_start_material</item>-->
+        <!--<item name="android:paddingRight">@dimen/abc_action_bar_default_padding_end_material</item>-->
+    </style>
+
+    <style name="ToolBarTitle" parent="android:Widget">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/md_white_1000</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--对话框按钮文字颜色-->
+        <item name="colorAccent">@color/color_48baf3</item>
+        <!--&lt;!&ndash;对话框内容文字颜色&ndash;&gt;-->
+        <!--<item name="android:textColorPrimary">#FFFFFF</item>-->
+        <!--&lt;!&ndash;对话框背景色&ndash;&gt;-->
+        <!--<item name="android:background">#5fa3d0</item>-->
+    </style>
+</resources>

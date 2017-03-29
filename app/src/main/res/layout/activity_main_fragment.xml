@@ -1,0 +1,58 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_48baf3">
+
+        <RadioGroup
+            android:id="@+id/main_top_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/top_rg_a"
+                android:layout_width="76dp"
+                android:layout_height="29dp"
+                android:background="@drawable/top_r_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@drawable/top_r_text"
+                android:textColorHighlight="@color/color_48baf3"
+                android:textSize="14dp"/>
+
+            <RadioButton
+                android:id="@+id/top_rg_b"
+                android:layout_width="76dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="-1dp"
+                android:background="@drawable/top_r_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="本机"
+                android:textColor="@drawable/top_r_text"
+                android:textColorHighlight="@color/color_48baf3"
+                android:textSize="14dp"/>
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <cwj.androidfilemanage.view.CustomViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>
