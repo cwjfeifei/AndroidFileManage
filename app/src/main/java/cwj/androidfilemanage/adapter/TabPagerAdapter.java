@@ -31,7 +31,6 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
     }
 
 
-    //配置标题的方法
     @Override
     public CharSequence getPageTitle(int position) {
         return title.get(position);

@@ -91,8 +91,6 @@ public class FileUtil {
         SimpleDateFormat formatter = new
                 SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         cal.setTimeInMillis(time);
-
-        // 输出：修改时间[2] 2009-08-17 10:32:38
         return formatter.format(cal.getTime());
     }
 
@@ -347,11 +345,6 @@ public class FileUtil {
             }
         }
         FolderInfo newFolder = new FolderInfo();
-//        if (folderFile.getAbsolutePath().equals("")) {
-//
-//        } else {
-//            newFolder.setName("音乐");
-//        }
         newFolder.setName(folderFile.getName());
         newFolder.setPath(folderFile.getAbsolutePath());
         imageFolders.add(newFolder);

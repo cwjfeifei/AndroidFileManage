@@ -29,7 +29,6 @@ public class MultipleItemQuickAdapter extends BaseMultiItemQuickAdapter<Multiple
     protected void convert(BaseViewHolder helper, MultipleItem item) {
         helper.setText(R.id.tv_file_name, item.getData().getFileName());
         if (item.getItemType() == MultipleItem.FOLD) {
-//            helper.setImageResource(R.id.iv_file, R.drawable.rc_ad_list_folder_icon);
             Glide.with(mContext).load(R.drawable.rc_ad_list_folder_icon).fitCenter().into((ImageView) helper.getView(R.id.iv_file));
         } else {
             helper.setText(R.id.tv_file_size, FileUtil.FormetFileSize(item.getData().getFileSize()));
@@ -41,7 +40,6 @@ public class MultipleItemQuickAdapter extends BaseMultiItemQuickAdapter<Multiple
             }
 
             Glide.with(mContext).load(FileUtil.getFileTypeImageId(mContext, item.getData().getFileName())).fitCenter().into((ImageView) helper.getView(R.id.iv_file));
-//            helper.setImageResource(R.id.iv_file, FileUtil.getFileTypeImageId(mContext, item.getData().getFileName()));
         }
     }
 

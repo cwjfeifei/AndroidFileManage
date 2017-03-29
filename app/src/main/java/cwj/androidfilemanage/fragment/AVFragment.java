@@ -57,17 +57,6 @@ public class AVFragment extends BaseFragment {
         fileInfos.clear();
         mEntityArrayList.clear();
         rlv_av = (RecyclerView) getActivity().findViewById(R.id.rlv_av);
-//        List<Uri> m = new ArrayList<>();
-//        m.add(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI);
-//        m.add(MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
-//        fileInfos = FileUtil.queryFolderInfo(getActivity(), m);
-//        for (int i = 0; i < fileInfos.size(); i++) {
-//            SubItem subItem = new SubItem(fileInfos.get(i).getName());
-//            for (int j = 0; j < fileInfos.get(i).getImages().size(); j++) {
-//                subItem.addSubItem(fileInfos.get(i).getImages().get(j));
-//            }
-//            mEntityArrayList.add(subItem);
-//        }
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("数据加载中");
         progressDialog.setCancelable(false);
@@ -140,23 +129,15 @@ public class AVFragment extends BaseFragment {
                 );
     }
 
-    /**
-     * rxjava递归查询内存中的视频文件
-     *
-     * @param f
-     * @return
-     */
     public static Observable<File> listFiles(final File f) {
         if (f.isDirectory()) {
             return Observable.from(f.listFiles()).flatMap(new Func1<File, Observable<File>>() {
                 @Override
                 public Observable<File> call(File file) {
-                    /**如果是文件夹就递归**/
                     return listFiles(file);
                 }
             });
         } else {
-            /**filter操作符过滤视频文件,是视频文件就通知观察者**/
             return Observable.just(f).filter(new Func1<File, Boolean>() {
                 @Override
                 public Boolean call(File file) {

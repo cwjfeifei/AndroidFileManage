@@ -45,7 +45,6 @@ public class SDCardActivity extends baseActivity {
     private File mCurrentPathFile = null;
     private File mSDCardPath = null;
     private String path;
-//    private int mCurrentPosition = 0;
 
     @OnClick(R.id.iv_title_back)
     void iv_title_back() {
@@ -157,11 +156,9 @@ public class SDCardActivity extends baseActivity {
                 for (FileInfo fileInfo : mList) {
                     if (fileInfo.getFileName().equals(fileInfos.get(i).getFileName())) {
                         fileInfos.get(i).setIsCheck(true);
-//                        mCurrentPosition = i;
                     }
                 }
             }
-//            rlv_sd_card.scrollToPosition(mCurrentPosition);
         }
         mAdapter.notifyDataSetChanged();
     }
