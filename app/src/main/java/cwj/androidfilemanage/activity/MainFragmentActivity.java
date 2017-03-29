@@ -47,6 +47,7 @@ public class MainFragmentActivity extends baseActivity {
 
     @Override
     public void initViewAndEvent() {
+        //6.0权限适配
         requestReadAndWriteSDPermission(new baseActivity.PermissionHandler() {
             @Override
             public void onGranted() {
@@ -59,8 +60,8 @@ public class MainFragmentActivity extends baseActivity {
         Log.e("cwj", "外置SD卡路径 = " + FileUtil.getStoragePath(this));
         Log.e("cwj", "内置SD卡路径 = " + Environment.getExternalStorageDirectory().getAbsolutePath());
         Log.e("cwj", "手机内存根目录路径  = " + Environment.getDataDirectory().getParentFile().getAbsolutePath());
-        fragments.add(new AllMainFragment());
-        fragments.add(new LocalMainFragment());
+        fragments.add(new AllMainFragment());//全部
+        fragments.add(new LocalMainFragment());//本机
         TabPagerAdapter pagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), mTitleList, fragments);
         main_viewpager.setAdapter(pagerAdapter);
         main_top_rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

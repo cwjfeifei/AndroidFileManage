@@ -21,6 +21,7 @@ import cwj.androidfilemanage.utils.SystemUtil;
 import cwj.androidfilemanage.view.CustomViewPager;
 
 /**
+ * 图片预览界面
  * Created by CWJ on 2017/3/28.
  */
 
@@ -100,7 +101,9 @@ public class ImagePreviewActivity extends AppCompatActivity {
         });
     }
 
-
+    /**
+     *显示和隐藏标题栏和状态栏
+     */
     public void switchBarVisibility() {
         barLayout.setVisibility(isShowBar ? View.GONE : View.VISIBLE);
         toolbar.setVisibility(isShowBar ? View.GONE : View.VISIBLE);

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.tapadoo.alerter.Alerter;
@@ -95,12 +96,17 @@ public class AllMainFragment extends BaseFragment {
 
     @Override
     public void onEventComming(EventCenter var1) {
-
+        Log.e("getEventCode", "getEventCode:::" + var1.getEventCode());
+        switch (var1.getEventCode()) {
+            case 3://点击 选中和不选中都通知更新一下
+                updateSizAndCount();
+                break;
+        }
     }
 
     @Override
     public boolean isBindEventBusHere() {
-        return false;
+        return true;
     }
 
 

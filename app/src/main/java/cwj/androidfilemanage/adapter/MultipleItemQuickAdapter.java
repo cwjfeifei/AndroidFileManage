@@ -38,7 +38,6 @@ public class MultipleItemQuickAdapter extends BaseMultiItemQuickAdapter<Multiple
             } else {
                 ((CheckBox) helper.getView(R.id.cb_file)).setChecked(false, false);
             }
-
             Glide.with(mContext).load(FileUtil.getFileTypeImageId(mContext, item.getData().getFileName())).fitCenter().into((ImageView) helper.getView(R.id.iv_file));
         }
     }

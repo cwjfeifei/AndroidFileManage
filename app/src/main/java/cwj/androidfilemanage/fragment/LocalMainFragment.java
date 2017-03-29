@@ -58,10 +58,10 @@ public class LocalMainFragment extends BaseFragment {
     @Override
     public void onEventComming(EventCenter var1) {
         switch (var1.getEventCode()) {
-            case 1:
+            case 1://点击 选中和不选中都通知更新一下
                 updateSizAndCount();
                 break;
-            case 2:
+            case 2://fragment切换更新底部视图，是否有预览项
                 if ((int) var1.getData() == 1) {//当前为相册fragment显示预览
                     tv_preview.setVisibility(View.VISIBLE);
                 } else {

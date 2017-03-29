@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -96,6 +98,7 @@ public class SDCardActivity extends baseActivity {
                         FileDao.deleteFile(fileInfos.get(position));
                         ((CheckBox) view.findViewById(R.id.cb_file)).setChecked(false, true);
                     }
+                    EventBus.getDefault().post(new EventCenter<>(3));
                     updateSizAndCount();
                 } else {
                     showFiles(new File(fileInfos.get(position).getFilePath()));
@@ -142,6 +145,7 @@ public class SDCardActivity extends baseActivity {
             mAdapter.setEmptyView(getEmptyView());
             Log.e("files", "files::为空啦");
         } else {
+            //获取文件信息
             fileInfos = getFileInfosFromFileArray(files);
             for (int i = 0; i < fileInfos.size(); i++) {
                 if (fileInfos.get(i).isDirectory) {
@@ -151,6 +155,7 @@ public class SDCardActivity extends baseActivity {
                 }
 
             }
+            //查询本地数据库，如果之前有选择的就显示打钩
             List<FileInfo> mList = FileDao.queryAll();
             for (int i = 0; i < fileInfos.size(); i++) {
                 for (FileInfo fileInfo : mList) {
